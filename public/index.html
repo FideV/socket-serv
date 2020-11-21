@@ -39,7 +39,8 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.1/socket.io.js" integrity="sha512-vGcPDqyonHb0c11UofnOKdSAt5zYRpKI4ow+v6hat4i96b7nHSn8PQyk0sT5L9RECyksp+SztCPP6bqeeGaRKg==" crossorigin="anonymous"></script>
   <script>
-    const socket = io('https://socket-server-reac.herokuapp.com/');
+    //const socket = io('https://socket-server-reac.herokuapp.com/');
+    const socket = io('http://localhost:8080');
 
     //Referencias al DOM HTML
     const formulario = document.querySelector('#miFormulario');
@@ -60,7 +61,7 @@
     });
 
     socket.on('mensaje-from-server', (data)=> {
-      mensajes.innerHTML += `<li>${data.texto}</li>`
+      //mensajes.innerHTML += `<li>${data.texto}</li>`
     })
 
 
